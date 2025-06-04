@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     function setFixedSize() {
         const pixelRatio = window.devicePixelRatio;
-        const scale = (1 / pixelRatio) * 0.4;
+        const scale = (1 / pixelRatio) * 0.5;
         const el = document.querySelector('.me');
         
         document.documentElement.style.setProperty('--pixel-ratio', pixelRatio);

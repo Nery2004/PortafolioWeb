@@ -49,8 +49,8 @@ body, html {
 }
 .me {
     position: absolute;
-    top: 55vh;
-    left: 63%;
+    top: 54vh;
+    left: 60.5%;
     width: 8vw;
     z-index: 2;
     animation: fadeIn 1s ease-out;
@@ -81,8 +81,8 @@ body, html {
 }
 
 #me-gusta{
-    top: 70vh;
-    left: 26.5vw;
+    top: 123vh;
+    left: 49vw;
     width: 8vw;
 }
 
