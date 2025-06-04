@@ -66,7 +66,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Asegurar que el video se reproduzca
     videoBackground.play().catch(e => {
         console.log('Video autoplay prevented:', e);
     });

@@ -35,14 +35,15 @@ body, html {
 .background-video-2 {
     position: absolute;
     top: 0;
-    left: 48vw;
+    left: 48.5vw;
     width: 60%; 
-    height: 102vh;
+    height: 100vh;
     object-fit: cover;
     object-position: center;
     z-index: 1;
     margin-left: 0%; 
-    clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%);
+    clip-path: polygon(0 0, 90% 0, 90% 100%, 0 100%);
+    transform: scaleX(-1);
 }
 /* Elementos interactivos FIJOS */
 .elementos-escenario {
@@ -65,20 +66,11 @@ body, html {
     transform: scale(1.1);
 }
 
-.me {
-    position: absolute;
-    top: 54vh;
-    left: 60.5%;
-    width: 8vw;
-    z-index: 2;
-    animation: fadeIn 1s ease-out;
-    pointer-events: none;
-}
-
 #quien-soy {
-    top: 9.26vh;    
-    left: 20.83vw;  
-    width: 5.21vw;  
+    top: 20vh;    
+    left: 35vw;  
+    width: 7vw;
+    animation: fadeIn 1s ease-out;  
 }
 
 #proyectos {
@@ -88,8 +80,8 @@ body, html {
 }
 
 #contacto {
-    top: 30vh;    
-    left: 53vw;   
+    top: 15vh;    
+    left: 50.5vw;   
     width: 8vw;   
 }
 
@@ -100,9 +92,9 @@ body, html {
 }
 
 #me-gusta {
-    top: 70vh;
-    left: 49vw;
-    width: 8vw;
+    top: 65vh;
+    left: 29vw;
+    width: 6vw;
 }
 
 .elemento-interactivo img {
@@ -188,9 +180,5 @@ body, html {
     
     .elemento-interactivo {
         width: 12vw !important;
-    }
-    
-    .me {
-        width: 15vw;
     }
 }
