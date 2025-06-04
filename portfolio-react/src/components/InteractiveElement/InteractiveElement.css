@@ -1,0 +1,67 @@
+/* Elementos interactivos FIJOS */
+.elementos-escenario {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+}
+
+.elemento-interactivo {
+    position: absolute;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
+}
+
+.elemento-interactivo:hover {
+    transform: scale(1.1);
+}
+
+#quien-soy {
+    top: 20vh;    
+    left: 35vw;  
+    width: 7vw;
+    animation: fadeIn 1s ease-out;  
+}
+
+#proyectos {
+    top: 75vh;
+    left: 15.63vw;   
+    width: 5.21vw;   
+}
+
+#contacto {
+    top: 15vh;    
+    left: 50.5vw;   
+    width: 8vw;   
+}
+
+#como-usarlo {
+    top: 0.93vh;     
+    left: 1.04vw;    
+    width: 5.21vw;   
+}
+
+#me-gusta {
+    top: 65vh;
+    left: 29vw;
+    width: 6vw;
+}
+
+.elemento-interactivo img {
+    width: 100%;
+    height: auto;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
