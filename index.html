@@ -7,84 +7,100 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="escenario">
-        <div class="background-container">
-            <div class="background"></div>
-            <div class="background duplicate"></div> 
+    <!-- Video de fondo fijo -->
+    <div class="background-container">
+        <video class="background-video" autoplay muted loop playsinline>
+            <source src="Sources/background.mp4" type="video/mp4">
+        </video>
+        <video class="background-video-2" autoplay muted loop playsinline>
+            <source src="Sources/background.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Elementos interactivos fijos -->
+    <div class="elementos-escenario">
+        <!-- Quien Soy -->
+        <a href="#" class="elemento-interactivo" id="quien-soy">
+            <img src="Sources/libro.png" alt="Quien Soy">
+        </a>
         
-            
-            <!-- Aquí irán tus elementos interactivos -->
-            <div class="elementos-escenario">
-                <!-- Quien Soy -->
-                <a href="#" class="elemento-interactivo" id="quien-soy">
-                    <img src="Sources/libro.png" >
-                </a>
-                
-                <!-- Proyectos -->
-                <a href="#" class="elemento-interactivo" id="proyectos">
-                    <img src="Sources/libro.png">
-                </a>
-                
-                <!-- Contacto -->
-                <a href="#" class="elemento-interactivo" id="contacto">
-                    <img src="Sources/perro.png">
-                </a>
-                <!-- Como usarlo -->
-                <a href="#" class="elemento-interactivo" id="como-usarlo">
-                    <img src="Sources/libro.png" >
-                <!-- Cosas que me gustan -->
-                </a>
-                    <a href="#" class="elemento-interactivo" id="me-gusta">
-                    <img src="Sources/pez.png">
-                </a>
-                <!-- Yo -->
-                <div class="me">
-                    <img src="Sources/me.png">
-                </div>
-            </div>   
+        <!-- Proyectos -->
+        <a href="#" class="elemento-interactivo" id="proyectos">
+            <img src="Sources/libro.png" alt="Proyectos">
+        </a>
+        
+        <!-- Contacto -->
+        <a href="#" class="elemento-interactivo" id="contacto">
+            <img src="Sources/perro.png" alt="Contacto">
+        </a>
+        
+        <!-- Como usarlo -->
+        <a href="#" class="elemento-interactivo" id="como-usarlo">
+            <img src="Sources/libro.png" alt="Como Usarlo">
+        </a>
+        
+        <!-- Cosas que me gustan -->
+        <a href="#" class="elemento-interactivo" id="me-gusta">
+            <img src="Sources/pez.png" alt="Me Gusta">
+        </a>
+        
+        <!-- Yo -->
+        <div class="me">
+            <img src="Sources/me.png" alt="Yo">
         </div>
     </div>
 
-    <!-- Popups (inicialmente ocultos) -->
+    <!-- Popups -->
     <div class="popup" id="popup-quien-soy">
         <div class="popup-contenido">
             <h2>Quién Soy</h2>
-            <p>Aquí puedes escribir sobre ti...</p>
-            <button class="cerrar-popup">X</button>
+            <p>¡Hola! Soy un desarrollador apasionado por crear experiencias digitales únicas. Me especializo en desarrollo web y diseño de interfaces interactivas.</p>
+            <p>Mi enfoque combina creatividad y funcionalidad para construir sitios web que no solo se ven bien, sino que también ofrecen una excelente experiencia de usuario.</p>
+            <button class="cerrar-popup">×</button>
         </div>
     </div>
 
     <div class="popup" id="popup-proyectos">
         <div class="popup-contenido">
             <h2>Mis Proyectos</h2>
-            <p>Aquí puedes mostrar tus proyectos...</p>
-            <button class="cerrar-popup">X</button>
+            <p><strong>Portafolio Interactivo</strong> - Un sitio web con elementos interactivos y video de fondo.</p>
+            <p><strong>Aplicación Web</strong> - Sistema de gestión desarrollado con tecnologías modernas.</p>
+            <p><strong>Landing Page</strong> - Páginas de aterrizaje optimizadas para conversión.</p>
+            <button class="cerrar-popup">×</button>
         </div>
     </div>
 
     <div class="popup" id="popup-contacto">
         <div class="popup-contenido">
             <h2>Contacto</h2>
-            <p>Aquí puedes poner tu información de contacto...</p>
-            <button class="cerrar-popup">X</button>
+            <p><strong>Email:</strong> contacto@miportafolio.com</p>
+            <p><strong>Teléfono:</strong> +502 1234-5678</p>
+            <p><strong>LinkedIn:</strong> linkedin.com/in/miportafolio</p>
+            <p><strong>GitHub:</strong> github.com/miportafolio</p>
+            <button class="cerrar-popup">×</button>
         </div>
     </div>
 
     <div class="popup" id="popup-como-usarlo">
         <div class="popup-contenido">
-            <h2>Como Usarlo</h2>
-            <p>Aquí puedes poner como usarlo...</p>
-            <button class="cerrar-popup">X</button>
+            <h2>Cómo Usarlo</h2>
+            <p><strong>Navegar:</strong> Los elementos están fijos en la pantalla para una navegación estática.</p>
+            <p><strong>Interactuar:</strong> Haz clic en los elementos coloridos para abrir ventanas con información.</p>
+            <p><strong>Cerrar:</strong> Usa el botón X o haz clic fuera de las ventanas para cerrarlas.</p>
+            <button class="cerrar-popup">×</button>
         </div>
     </div>
 
     <div class="popup" id="popup-me-gusta">
         <div class="popup-contenido">
-            <h2>Me gusta</h2>
-            <p>Aquí puedes poner cosas que me gustan...</p>
-            <button class="cerrar-popup">X</button>
+            <h2>Me Gusta</h2>
+            <p><strong>Programación:</strong> JavaScript, React, Node.js, Python</p>
+            <p><strong>Diseño:</strong> UI/UX, animaciones, experiencias interactivas</p>
+            <p><strong>Hobbies:</strong> Fotografía, música, videojuegos, naturaleza</p>
+            <p><strong>Aprendizaje:</strong> Nuevas tecnologías, tendencias de diseño</p>
+            <button class="cerrar-popup">×</button>
         </div>
-    </div>    
+    </div>
 
     <script src="app.js"></script>
 </body>

@@ -7,46 +7,64 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
-/* Escenario 2D */
-.escenario {
-    position: relative;
-    width: 100%;
+/* Contenedor del video de fondo */
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
     height: 100vh;
-    overflow-y: scroll;
-    scrollbar-width: none;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: #000; /* Color de fondo para bordes si es necesario */
 }
 
-/* Fondo de pantalla */
-.background {
+.background-video {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 200vh;
-    background-image: url('Sources/background.jpg');
-    background-size: 100% auto;
-    background-repeat: repeat-y;
-    background-position: center;
-    z-index: 1;
-    transition: transform 0.1s linear;
+    width: 60%; 
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+    margin-left: 0%; 
 }
-
-/* Elementos interactivos en el escenario */
+.background-video-2 {
+    position: absolute;
+    top: 0;
+    left: 48vw;
+    width: 60%; 
+    height: 102vh;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+    margin-left: 0%; 
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%);
+}
+/* Elementos interactivos FIJOS */
 .elementos-escenario {
-    position: relative;
-    z-index: 2;
-    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
 }
 
 .elemento-interactivo {
     position: absolute;
     cursor: pointer;
     transition: transform 0.3s ease;
+    filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
 }
 
 .elemento-interactivo:hover {
     transform: scale(1.1);
 }
+
 .me {
     position: absolute;
     top: 54vh;
@@ -54,6 +72,7 @@ body, html {
     width: 8vw;
     z-index: 2;
     animation: fadeIn 1s ease-out;
+    pointer-events: none;
 }
 
 #quien-soy {
@@ -63,7 +82,7 @@ body, html {
 }
 
 #proyectos {
-    bottom: -12.26vh; 
+    top: 75vh;
     left: 15.63vw;   
     width: 5.21vw;   
 }
@@ -80,8 +99,8 @@ body, html {
     width: 5.21vw;   
 }
 
-#me-gusta{
-    top: 123vh;
+#me-gusta {
+    top: 70vh;
     left: 49vw;
     width: 8vw;
 }
@@ -91,7 +110,7 @@ body, html {
     height: auto;
 }
 
-/* Estilos para los popups */
+/* Popups */
 .popup {
     display: none;
     position: fixed;
@@ -99,11 +118,10 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Fondo más oscuro para mejor contraste */
-    z-index: 1000; /* Mayor z-index para asegurar que esté arriba de todo */
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Evita scroll dentro del popup */
 }
 
 .popup-contenido {
@@ -113,24 +131,33 @@ body, html {
     max-width: 600px;
     width: 90%;
     max-height: 80vh;
-    overflow-y: auto; /* Scroll interno si el contenido es muy largo */
+    overflow-y: auto;
     position: relative;
-    animation: fadeIn 0.3s ease-out;
+    animation: popupFadeIn 0.3s ease-out;
 }
+
 @keyframes fadeIn {
     from { 
         opacity: 0;
-        transform: translateX(-54%) translateY(20px) scale(calc(0.5 / var(--pixel-ratio)));
+        transform: translateY(20px);
     }
     to { 
         opacity: 1;
-        transform: translateX(-54%) translateY(0) scale(calc(0.5 / var(--pixel-ratio)));
+        transform: translateY(0);
     }
 }
 
-.body-no-scroll {
-    overflow: hidden;
+@keyframes popupFadeIn {
+    from { 
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to { 
+        opacity: 1;
+        transform: scale(1);
+    }
 }
+
 .cerrar-popup {
     position: absolute;
     top: 10px;
@@ -139,10 +166,31 @@ body, html {
     border: none;
     font-size: 20px;
     cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.contenido-portafolio {
-    position: relative;
-    z-index: 2;
-    min-height: 200vh; /* Misma altura que el fondo */
-    padding: 20px;
+
+.cerrar-popup:hover {
+    background-color: #e0e0e0;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .background-video {
+        min-width: 100vw;
+        min-height: 100vh;
+    }
+    
+    .elemento-interactivo {
+        width: 12vw !important;
+    }
+    
+    .me {
+        width: 15vw;
+    }
 }
