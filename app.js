@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const quienSoy = document.getElementById('quien-soy');
     const proyectos = document.getElementById('proyectos');
     const contacto = document.getElementById('contacto');
+    const comousarlo = document.getElementById('como-usarlo');
+    const megusta = document.getElementById('me-gusta');
     const background = document.querySelector('.background');
     const escenario = document.querySelector('.escenario');
     const body = document.body;
@@ -11,7 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const popupQuienSoy = document.getElementById('popup-quien-soy');
     const popupProyectos = document.getElementById('popup-proyectos');
     const popupContacto = document.getElementById('popup-contacto');
-    
+    const popupComoUsarlo = document.getElementById('popup-como-usarlo');
+    const popupMeGusta = document.getElementById('popup-me-gusta');
     // Variables de control
     let lastScroll = 0;
     let currentPos = 0;
@@ -57,6 +60,35 @@ document.addEventListener('DOMContentLoaded', function() {
         // Reanudar el efecto de scroll infinito
         animationId = requestAnimationFrame(handleScroll);
     }
+    function setFixedSize() {
+        const pixelRatio = window.devicePixelRatio;
+        const scale = (1 / pixelRatio) * 0.4;
+        const el = document.querySelector('.me');
+        
+        document.documentElement.style.setProperty('--pixel-ratio', pixelRatio);
+        
+        if (!el.classList.contains('animation-ended')) {
+            el.addEventListener('animationend', function() {
+                this.style.transform = `translateX(-54%) scale(${scale})`;
+                this.classList.add('animation-ended');
+            }, { once: true });
+        } else {
+            el.style.transform = `translateX(-54%) scale(${scale})`;
+        }
+        
+        el.style.transformOrigin = 'top left';
+    }
+
+    window.addEventListener('resize', setFixedSize);
+    window.addEventListener('DOMContentLoaded', function() {
+        const pixelRatio = window.devicePixelRatio;
+        document.documentElement.style.setProperty('--pixel-ratio', pixelRatio);
+        const el = document.querySelector('.me');
+        el.style.transform = `translateX(-54%) scale(${(1 / pixelRatio) * 0.5})`;
+        el.style.transformOrigin = 'top left';
+        void el.offsetWidth;
+        el.style.animation = 'fadeIn 1s ease-out';
+    });
 
     // Event listeners para popups
     quienSoy.addEventListener('click', function(e) {
@@ -73,7 +105,17 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         showPopup(popupContacto);
     });
-    
+
+        comousarlo.addEventListener('click', function(e) {
+        e.preventDefault();
+        showPopup(popupComoUsarlo);
+    });
+
+        megusta.addEventListener('click', function(e) {
+        e.preventDefault();
+        showPopup(popupMeGusta);
+    });
+
     // Cerrar popups
     document.querySelectorAll('.cerrar-popup').forEach(function(boton) {
         boton.addEventListener('click', function() {

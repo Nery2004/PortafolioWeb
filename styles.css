@@ -47,24 +47,43 @@ body, html {
 .elemento-interactivo:hover {
     transform: scale(1.1);
 }
+.me {
+    position: absolute;
+    top: 55vh;
+    left: 63%;
+    width: 8vw;
+    z-index: 2;
+    animation: fadeIn 1s ease-out;
+}
 
-/* Posicionamiento de los elementos (ajusta según necesites) */
 #quien-soy {
-    top: 30%;
-    left: 20%;
-    width: 100px;
+    top: 9.26vh;    
+    left: 20.83vw;  
+    width: 5.21vw;  
 }
 
 #proyectos {
-    top: 50%;
-    left: 70%;
-    width: 100px;
+    bottom: -12.26vh; 
+    left: 15.63vw;   
+    width: 5.21vw;   
 }
 
 #contacto {
-    top: 70%;
-    left: 40%;
-    width: 100px;
+    top: 30vh;    
+    left: 53vw;   
+    width: 8vw;   
+}
+
+#como-usarlo {
+    top: 0.93vh;     
+    left: 1.04vw;    
+    width: 5.21vw;   
+}
+
+#me-gusta{
+    top: 70vh;
+    left: 26.5vw;
+    width: 8vw;
 }
 
 .elemento-interactivo img {
@@ -99,8 +118,14 @@ body, html {
     animation: fadeIn 0.3s ease-out;
 }
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from { 
+        opacity: 0;
+        transform: translateX(-54%) translateY(20px) scale(calc(0.5 / var(--pixel-ratio)));
+    }
+    to { 
+        opacity: 1;
+        transform: translateX(-54%) translateY(0) scale(calc(0.5 / var(--pixel-ratio)));
+    }
 }
 
 .body-no-scroll {
