@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PortfolioScene from './components/PortfolioScene/PortfolioScene';
+import BackgroundMusic from './components/BackgroundMusic/BackgroundMusic';
 
 function App() {
   const [activePopup, setActivePopup] = useState(null);
@@ -55,15 +56,26 @@ function App() {
           <p><strong>Aprendizaje:</strong> Nuevas tecnologías, tendencias de diseño</p>
         </>
       )
+    },
+    'erick': {
+      title: 'Erick',
+      content: (
+        <>
+          <p><strong>Erick:</strong> Hola Soy Erick y no se que hago en este Portafolio</p>
+        </>
+      )
     }
   };
 
   return (
-    <PortfolioScene 
-      activePopup={activePopup}
-      setActivePopup={setActivePopup}
-      popups={popups}
-    />
+    <>
+      <BackgroundMusic />
+      <PortfolioScene 
+        activePopup={activePopup}
+        setActivePopup={setActivePopup}
+        popups={popups}
+      />
+    </>
   );
 }
 
