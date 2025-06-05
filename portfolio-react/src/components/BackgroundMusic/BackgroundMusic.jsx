@@ -13,18 +13,37 @@ const BackgroundMusic = () => {
       audio.volume = volume;
       audio.loop = true;
       
-      // Intentar reproducir automáticamente
+      // Múltiples intentos para iniciar la música
       const playAudio = async () => {
         try {
           await audio.play();
           setIsPlaying(true);
         } catch (error) {
-          console.log('Autoplay bloqueado por el navegador:', error);
+          console.log('Autoplay bloqueado, esperando interacción del usuario');
           setIsPlaying(false);
+          
+          // Reproducir en la primera interacción del usuario
+          const startOnInteraction = () => {
+            audio.play().then(() => {
+              setIsPlaying(true);
+              document.removeEventListener('click', startOnInteraction);
+              document.removeEventListener('keydown', startOnInteraction);
+              document.removeEventListener('touchstart', startOnInteraction);
+            }).catch(e => console.log('Error:', e));
+          };
+          
+          document.addEventListener('click', startOnInteraction);
+          document.addEventListener('keydown', startOnInteraction);
+          document.addEventListener('touchstart', startOnInteraction);
         }
       };
       
+      // Intentar reproducir inmediatamente
       playAudio();
+      
+      // También intentar después de un pequeño delay
+      setTimeout(playAudio, 100);
+      setTimeout(playAudio, 500);
     }
   }, []);
 
@@ -59,6 +78,8 @@ const BackgroundMusic = () => {
       <audio 
         ref={audioRef}
         preload="auto"
+        autoPlay
+        muted={false}
       >
         <source src="/audio/background-music.mp3" type="audio/mpeg" />
         <source src="/audio/background-music.ogg" type="audio/ogg" />

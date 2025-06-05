@@ -29,10 +29,9 @@ function App() {
       title: 'Contacto',
       content: (
         <>
-          <p><strong>Email:</strong> contacto@miportafolio.com</p>
-          <p><strong>Teléfono:</strong> +502 1234-5678</p>
-          <p><strong>LinkedIn:</strong> linkedin.com/in/miportafolio</p>
-          <p><strong>GitHub:</strong> github.com/miportafolio</p>
+          <p><strong>Email:</strong> josemolinatics@gmail.com</p>
+          <p><strong>Teléfono:</strong> +502 5412-3422</p>
+          <p href="https://github.com/nery2004"><strong>GitHub:</strong> Nery2004</p>
         </>
       )
     },
@@ -40,8 +39,10 @@ function App() {
       title: 'Cómo Usarlo',
       content: (
         <>
-          <p><strong>Navegar:</strong> Los elementos están fijos en la pantalla para una navegación estática.</p>
-          <p><strong>Interactuar:</strong> Haz clic en los elementos coloridos para abrir ventanas con información.</p>
+          <p><strong>Música:</strong> Arriba a la derecha puedes quitar la música si lo deseas.</p>
+          <p><strong>Interacción:</strong> La mayoría de personas no son interactivas, solo te hablarán. El único personaje interactivo es Nery (el chavo de camisa negra con logo rojo de Spotify) - soy yo, y te compartirá información breve sobre mí.</p>
+          <p><strong>Información:</strong> Las personas normales no contienen información. Los objetos son los que guardan los elementos importantes de mi portafolio.</p>
+          <p><strong>Navegación:</strong> Haz clic en los elementos coloridos para abrir ventanas con información relevante.</p>
           <p><strong>Cerrar:</strong> Usa el botón X o haz clic fuera de las ventanas para cerrarlas.</p>
         </>
       )
@@ -62,6 +63,22 @@ function App() {
       content: (
         <>
           <p><strong>Erick:</strong> Hola Soy Erick y no se que hago en este Portafolio</p>
+        </>
+      )
+    },
+    'amigos': {
+      title: 'Vaconas',
+      content: (
+        <>
+          <p><strong>Amigos:</strong> Vaconas 4ever!!! </p>
+        </>
+      )
+    },
+    'beto': {
+      title: 'Beto',
+      content: (
+        <>
+          <p><strong>Beto:</strong> Hola Soy Beto...</p>
         </>
       )
     }

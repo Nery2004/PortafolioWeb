@@ -55,7 +55,17 @@
     left: 29vw;
     width: 6vw;
 }
-
+#amigos {
+    top: 65vh;
+    left: 29vw;
+    width: 6vw;
+}
+#beto {
+    top: 65vh;
+    left: 29vw;
+    width: 6vw;
+    transform: scaleX(-1);
+}
 .elemento-interactivo img {
     width: 100%;
     height: auto;

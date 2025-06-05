@@ -10,7 +10,9 @@ const PortfolioScene = ({ activePopup, setActivePopup, popups }) => {
     { id: 'contacto', top: '15vh', left: '50.5vw', width: '8vw', img: '/images/perro.png' },
     { id: 'como-usarlo', top: '0.93vh', left: '1.04vw', width: '5.21vw', img: '/images/libro.png' },
     { id: 'me-gusta', top: '65vh', left: '29vw', width: '6vw', img: '/images/pez.png' },
-    { id: 'erick', top: '73vh', left: '83vw', width: '8vw', img: '/images/erick.png' }
+    { id: 'erick', top: '73vh', left: '83vw', width: '8vw', img: '/images/erick.png' },
+    { id: 'amigos', top: '71vh', left: '50vw', width: '10vw', img: '/images/amigos.png' },
+    { id: 'beto', top: '73vh', left: '30vw', width: '8vw', img: '/images/beto.png' }
   ];
 
   return (
