@@ -10,8 +10,9 @@ function App() {
       title: 'Quién Soy',
       content: (
         <>
-          <p>¡Hola! Soy un desarrollador apasionado por crear experiencias digitales únicas. Me especializo en desarrollo web y diseño de interfaces interactivas.</p>
-          <p>Mi enfoque combina creatividad y funcionalidad para construir sitios web que no solo se ven bien, sino que también ofrecen una excelente experiencia de usuario.</p>
+          <p>¡Hola! Soy <strong>Nery</strong>, tengo <strong>20 años</strong> (nacido el <strong>16/12/2004</strong>) y soy un <strong>desarrollador web</strong> apasionado por crear páginas y experiencias digitales únicas.</p>
+          <p>Este portafolio muestra mis proyectos y habilidades enfocadas en el <strong>desarrollo de sitios web</strong>, combinando diseño atractivo con funcionalidad.</p>
+          <p>Me gusta aprender tecnologías nuevas y aplicar soluciones creativas en cada proyecto.</p>
         </>
       )
     },
@@ -72,7 +73,7 @@ function App() {
       title: 'Vaconas',
       content: (
         <>
-          <p><strong>Amigos:</strong> Vaconas 4ever!!! </p>
+          <p><strong>Amigos:</strong> Vivan las Vaconas!! </p>
         </>
       )
     },
