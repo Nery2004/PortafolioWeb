@@ -43,7 +43,7 @@ function App() {
       content: (
         <>
           <p><strong>Música:</strong> Arriba a la derecha puedes quitar la música si lo deseas.</p>
-          <p><strong>Interacción:</strong> La mayoría de personas no son interactivas, solo te hablarán. El único personaje interactivo es Nery (el chavo de camisa negra con logo rojo de Spotify) - soy yo, y te compartirá información breve sobre mí.</p>
+          <p><strong>Interacción:</strong> La mayoría de personas no son interactivas, solo te hablarán. El único personaje interactivo es Nery (el chavo de camisa negra con logo rojo de Spotify) - soy yo, y te compartirá información breve sobre mí. Los objetos claves son <strong> Pez Manzana Tita (Mi perro) </strong></p>
           <p><strong>Información:</strong> Las personas normales no contienen información. Los objetos son los que guardan los elementos importantes de mi portafolio.</p>
           <p><strong>Navegación:</strong> Haz clic en los elementos coloridos para abrir ventanas con información relevante.</p>
           <p><strong>Cerrar:</strong> Usa el botón X o haz clic fuera de las ventanas para cerrarlas.</p>
