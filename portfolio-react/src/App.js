@@ -16,12 +16,14 @@ function App() {
       )
     },
     'proyectos': {
-      title: 'Mis Proyectos',
+      title: 'Tareas de Web',
       content: (
         <>
-          <p><strong>Portafolio Interactivo</strong> - Un sitio web con elementos interactivos y video de fondo.</p>
-          <p><strong>Aplicación Web</strong> - Sistema de gestión desarrollado con tecnologías modernas.</p>
-          <p><strong>Landing Page</strong> - Páginas de aterrizaje optimizadas para conversión.</p>
+          <p><a href='https://23218.dernait.my/Proyecto-1-Calculadora/'><strong>Calculadora</strong></a></p>
+          <p><a href='https://23218.dernait.my/CSSonlyracha.html'><strong>CSSonlyracha</strong></a></p>
+          <p><a href='https://23218.dernait.my/Lab5JSonly.html'><strong>Chat</strong></a></p>
+          <p><a href='https://23218.dernait.my/Lab6React.html'><strong>Memoria</strong></a></p>
+          <p><a href='https://nrywhite.lat/23218/Lab-3-HTML-only/'><strong>Lab Html Only</strong></a></p>
         </>
       )
     },
@@ -31,7 +33,7 @@ function App() {
         <>
           <p><strong>Email:</strong> josemolinatics@gmail.com</p>
           <p><strong>Teléfono:</strong> +502 5412-3422</p>
-          <p href="https://github.com/nery2004"><strong>GitHub:</strong> Nery2004</p>
+          <p><strong>GitHub:</strong> Nery2004</p>
         </>
       )
     },
@@ -51,12 +53,12 @@ function App() {
       title: 'Me Gusta',
       content: (
         <>
-          <p><strong>Programación:</strong> JavaScript, React, Node.js, Python</p>
-          <p><strong>Diseño:</strong> UI/UX, animaciones, experiencias interactivas</p>
-          <p><strong>Hobbies:</strong> Fotografía, música, videojuegos, naturaleza</p>
+          <p><strong>Música:</strong> Escuchar música en Spotify, descubrir nuevos artistas</p>
+          <p><strong>Deportes:</strong> Jugar fútbol y hacer ejercicio</p>
+          <p><strong>Hobbies:</strong> Videojuegos, naturaleza</p>
           <p><strong>Aprendizaje:</strong> Nuevas tecnologías, tendencias de diseño</p>
         </>
-      )
+      ) 
     },
     'erick': {
       title: 'Erick',
@@ -79,6 +81,22 @@ function App() {
       content: (
         <>
           <p><strong>Beto:</strong> Hola Soy Beto...</p>
+        </>
+      )
+    },
+    'diaz': {
+      title: 'Diaz',
+      content: (
+        <>
+          <p><strong>Diaz:</strong> Me fui momia :(</p>
+        </>
+      )
+    },
+    'vorwin': {
+      title: 'Vorwin',
+      content: (
+        <>
+          <p><strong>Vorwin:</strong> Hago dos cosas, nada y nada...</p>
         </>
       )
     }

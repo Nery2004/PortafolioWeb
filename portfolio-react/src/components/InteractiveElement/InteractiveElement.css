@@ -54,17 +54,36 @@
     top: 65vh;
     left: 29vw;
     width: 6vw;
+    animation: fadeIn 1s ease-out;  
 }
 #amigos {
     top: 65vh;
     left: 29vw;
     width: 6vw;
+    animation: fadeIn 1s ease-out;  
 }
+
 #beto {
     top: 65vh;
     left: 29vw;
     width: 6vw;
+    animation: fadeIn 1s ease-out;  
     transform: scaleX(-1);
+}
+
+#diaz {
+    top: 65vh;
+    left: 29vw;
+    width: 6vw;
+    animation: fadeIn 1s ease-out;  
+    transform: scaleX(-1);
+}
+
+#vorwin {
+    top: 65vh;
+    left: 29vw;
+    width: 6vw;
+    animation: fadeIn 1s ease-out;  
 }
 .elemento-interactivo img {
     width: 100%;
